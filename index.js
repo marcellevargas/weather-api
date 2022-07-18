@@ -25,10 +25,9 @@ async function weather_data() {
 }
 
 app.get("/", (req, res) => {
-  //   weather_data().then((data) => {
-  //     res.json({ data: data });
-  //   });
-  res.send("Hello World!");
+    weather_data().then((data) => {
+      res.json({ data: data });
+    });
 });
 
 app.listen(port || 3000, () => {
