@@ -4,7 +4,9 @@ const app = express();
 const port = 8080;
 
 async function weather_data() {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    args: ["--no-sandbox", "--disable-setuid-sandbox"]
+  });
   const page = await browser.newPage();
 
   await page.goto("https://www.google.com/search?q=tempo+rio+de+janeiro");
