@@ -4,7 +4,7 @@
   "description": "Criação de uma API para fornecer os dados da previsão do Tempo",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,6 +28,7 @@
   "homepage": "https://github.com/marcellevargas/weather-api#readme",
   "dependencies": {
     "express": "^4.18.1",
+    "nodemon": "^2.0.19",
     "puppeteer": "^15.4.0"
   }
 }

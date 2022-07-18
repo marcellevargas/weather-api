@@ -1,6 +1,9 @@
 const puppeteer = require("puppeteer");
+const express = require("express");
+const app = express();
+const port = 8080;
 
-(async () => {
+async function weather_data() {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
@@ -15,6 +18,16 @@ const puppeteer = require("puppeteer");
     };
   });
 
-  console.log(weather);
   await browser.close();
-})();
+  return weather;
+}
+
+app.get("/", (req, res) => {
+  weather_data().then((data) => {
+    res.json({ data: data });
+  });
+});
+
+app.listen(port, () => {
+  console.log(`Running in http://localhost:${port}`);
+});
