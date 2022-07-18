@@ -1,11 +1,11 @@
 const puppeteer = require("puppeteer");
 const express = require("express");
 const app = express();
-const port = 8080;
+const port = 3000;
 
 async function weather_data() {
   const browser = await puppeteer.launch({
-    args: ["--no-sandbox", "--disable-setuid-sandbox"]
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
   const page = await browser.newPage();
 
@@ -25,9 +25,10 @@ async function weather_data() {
 }
 
 app.get("/", (req, res) => {
-  weather_data().then((data) => {
-    res.json({ data: data });
-  });
+  //   weather_data().then((data) => {
+  //     res.json({ data: data });
+  //   });
+  res.send("Hello World!");
 });
 
 app.listen(port || 3000, () => {
