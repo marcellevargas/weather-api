@@ -9,7 +9,7 @@ async function weather_data() {
   });
   const page = await browser.newPage();
 
-  await page.goto("https://www.google.com/search?q=tempo+rio+de+janeiro");
+  await page.goto("https://www.google.com/search?q=tempo+rio+de+janeiro+graus+celsius");
 
   const weather = await page.evaluate(() => {
     return {
