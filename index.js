@@ -5,11 +5,15 @@ const port = 3000;
 
 async function weather_data() {
   const browser = await puppeteer.launch({
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    headless: true,
+    defaultViewport: null,
+    args: ["--incognito", "--no-sandbox", "--single-process", "--no-zygote"],
   });
   const page = await browser.newPage();
 
-  await page.goto("https://www.google.com/search?q=tempo+rio+de+janeiro+graus+celsius");
+  await page.goto(
+    "https://www.google.com/search?q=tempo+rio+de+janeiro+graus+celsius"
+  );
 
   const weather = await page.evaluate(() => {
     return {
@@ -25,10 +29,10 @@ async function weather_data() {
 }
 
 app.get("/", (req, res) => {
-    // weather_data().then((data) => {
-    //   res.json({ data: data });
-    // });
-    res.json({ data: 'data' });
+  // weather_data().then((data) => {
+  //   res.json({ data: data });
+  // });
+  res.json({ data: "data" });
 });
 
 app.listen(port || 3000, () => {
