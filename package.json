@@ -31,7 +31,6 @@
   "homepage": "https://github.com/marcellevargas/weather-api#readme",
   "dependencies": {
     "express": "^4.18.1",
-    "nodemon": "^2.0.19",
     "puppeteer": "^15.4.0"
   }
 }
