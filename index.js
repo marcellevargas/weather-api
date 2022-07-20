@@ -10,9 +10,7 @@ async function weather_data() {
   });
   const page = await browser.newPage();
 
-  await page.goto(
-    "https://www.google.com/search?q=tempo+rio+de+janeiro+graus+celsius"
-  );
+  await page.goto("https://www.google.com/search?q=tempo+rio+de+janeiro+graus+celsius");
 
   const weather = await page.evaluate(() => {
     return {
@@ -29,7 +27,7 @@ async function weather_data() {
 
 app.get("/", (req, res) => {
   weather_data().then((data) => {
-    res.json({ data: "[" + data + "]" });
+    res.json({ data: data });
   });
 });
 
