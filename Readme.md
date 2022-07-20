@@ -21,6 +21,7 @@ Este projeto ainda está em desenvolvimento e em breve teremos atualizações. A
 - [ ] Response com a previsão do tempo para os próximos dias
 - [ ] Response com url de imagem
 - [ ] Receber o local por meio de uma requisição
+- [ ] Configurar CORS
 
 ## 🚀 Instalando Weather API
 
