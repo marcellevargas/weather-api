@@ -40,6 +40,17 @@ npm install
 ```
 npm start
 ```
+
+## 🚀 Deploy Heroku
+> Em settings > buildpacks adicionar os pacotes
+```
+heroku/nodejs
+
+https://github.com/jontewks/puppeteer-heroku-buildpack.git
+
+https://buildpack-registry.s3.amazonaws.com/buildpacks/jontewks/puppeteer.tgz
+```
+
 ## 🤝 Deva do projeto
 Espero que esse projeto te ajude no seu trabalho, se você gostou deixe uma estrelinha.
 
