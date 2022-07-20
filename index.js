@@ -27,7 +27,7 @@ async function weather_data() {
 
 app.get("/", (req, res) => {
   weather_data().then((data) => {
-    res.json({ data: data });
+    res.json({ weather_data: data });
   });
 });
 
