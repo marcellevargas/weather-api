@@ -58,7 +58,7 @@ Espero que esse projeto te ajude no seu trabalho, se você gostou deixe uma estr
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/marcellevargas">
+      <a href="https://github.com/marcellecode">
         <img src="https://avatars.githubusercontent.com/u/37669732?v=4" width="100px;" alt="Foto da Marcelle no GitHub"/><br>
         <sub>
           <b>Marcelle</b>
