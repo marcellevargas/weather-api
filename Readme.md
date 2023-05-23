@@ -18,7 +18,7 @@
 
 Este projeto ainda está em desenvolvimento e em breve teremos atualizações. As próximas atualizações serão:
 
-- [ ] Response com a previsão do tempo para os próximos dias
+- [x] Response com a previsão do tempo para os próximos dias
 - [ ] Response com url de imagem
 - [x] Receber o local por meio de uma requisição
 - [ ] Configurar CORS
