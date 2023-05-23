@@ -20,17 +20,17 @@ async function weather_data(city) {
 
     const weather = await page.evaluate(() => {
       return {
-        tempoAtual: document.getElementById("wob_tm").innerText,
-        chanceChuva: document.getElementById("wob_pp").innerText,
-        umidade: document.getElementById("wob_hm").innerText,
-        vento: document.getElementById("wob_ws").innerText,
+        diasDaSemana: Array.from(document.getElementsByClassName('Z1VzSb')).map(el=> el.innerText),
+        temperaturasMaxima: Array.from(document.getElementsByClassName('gNCp2e')).map(el=> el.innerText),
+        temperaturasMinima: Array.from(document.getElementsByClassName('QrNVmd ZXCv8e')).map(el=> el.innerText)
       };
     });
 
     await browser.close();
     return weather;
-  } else {
-    return "Please send a City";
+  }
+  else {
+    return "Please send a City"
   }
 }
 

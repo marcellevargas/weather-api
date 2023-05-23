@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const puppeteer = require("puppeteer");
 const currentWeatherRoute = require("./routes/currentWeather");
+const featureWeatherRoute = require("./routes/futureWeather");
 app.use(express.json());
 
 // async function weather_data() {
@@ -34,5 +35,6 @@ app.use(express.json());
 // });
 
 app.use("/api/weathers/current", currentWeatherRoute);
+app.use("/api/weathers/feature", featureWeatherRoute);
 
 app.listen(process.env.PORT || 3000);
